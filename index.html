@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title> LIA & Dhafid | Wedding Invitation</title>
+<meta name="description" content="Undangan pernikahan digital LIA & DHAFID — 12 Desember 2026. Dengan penuh sukacita, kami mengundang Anda untuk merayakan hari bahagia kami.">
+
+<!-- ============ OPEN GRAPH ============ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="LIA & DHAFID | Wedding Invitation">
+<meta property="og:description" content="Dengan penuh sukacita, kami mengundang Anda untuk merayakan hari bahagia kami.">
+<meta property="og:image" content="assets/image/gallery/gallery1.jpeg">
+<meta property="og:locale" content="id_ID">
+
+<!-- ============ TWITTER CARD ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LIA & DHAFID | Wedding Invitation">
+<meta name="twitter:description" content="Dengan penuh sukacita, kami mengundang Anda untuk merayakan hari bahagia kami.">
+<meta name="twitter:image" content="assets/image/gallery/gallery1.jpeg">
+
+<!-- ============ FAVICON ============ -->
+<link rel="icon" type="image/svg+xml" href="assets/icon/x.svg">
+
+<!-- ============ SCHEMA.ORG ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Pernikahan LIA & DHAFID",
+  "startDate": "2026-12-12T09:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "The Kayana Grand Ballroom",
+    "address": "Jakarta Selatan, Indonesia"
+  }
+}
+</script>
+
+<!-- ============ FONTS ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ============ VENDOR CSS ============ -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+<!-- ============ APP CSS ============ -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="skip-link">Lompat ke konten utama</a>
+
+<!-- ============================================================
+     LOADING SCREEN
+================================================================ -->
+<div id="preloader" aria-hidden="true">
+  <div class="preloader-ornament">
+    <span class="preloader-initial">L</span>
+    <span class="preloader-amp">&amp;</span>
+    <span class="preloader-initial">D</span>
+  </div>
+  <div class="preloader-bar"><span></span></div>
+</div>
+
+<!-- ============================================================
+     OPENING / ENVELOPE SCREEN
+================================================================ -->
+<section id="envelope-screen" aria-label="Halaman pembuka undangan">
+  <div class="envelope-bg" style="background-image:url('assets/image/gallery/gallery1.jpeg');"></div>
+  <div class="envelope-overlay"></div>
+
+  <div class="envelope-content">
+    <p class="envelope-eyebrow" data-split>The Wedding Of</p>
+    <h1 class="envelope-names" data-split>LIA <span class="amp">&amp;</span> Dhafid</h1>
+    <div class="envelope-divider" aria-hidden="true"></div>
+    <p class="envelope-guest-label">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+    <p class="envelope-guest-name" id="guest-name">Tamu Undangan</p>
+
+    <div class="envelope-wrap">
+      <div class="envelope-box" id="envelope-box">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter" id="envelope-letter">
+          <span class="letter-monogram">L&amp;D</span>
+          <span class="letter-date">12 . 12 . 2026</span>
+        </div>
+        <div class="envelope-flap"></div>
+      </div>
+    </div>
+
+    <button type="button" id="open-invitation-btn" class="btn-open" aria-label="Buka undangan pernikahan">
+      <span class="btn-open-icon" aria-hidden="true">✦</span>
+      <span>Buka Undangan</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAIN APPLICATION (hidden until envelope opens)
+================================================================ -->
+<div id="main-app" class="split-layout" hidden>
+
+  <!-- ============ LEFT PANEL (sticky, desktop only) ============ -->
+  <aside class="left-panel" aria-hidden="true">
+    <div class="left-slideshow" id="left-slideshow">
+      <!-- slides injected by JS from gallery folder -->
+    </div>
+    <div class="left-panel-overlay"></div>
+    <div class="left-panel-caption">
+      <span class="caption-accent">LIA &amp; Dhafid</span>
+      <span class="caption-date">12 Desember 2026</span>
+    </div>
+  </aside>
+
+  <!-- ============ RIGHT PANEL (scrollable content) ============ -->
+  <main id="main-content" class="right-panel" tabindex="-1">
+
+    <!-- ========== 1. HERO ========== -->
+    <section id="hero" class="section hero-section" data-bg-index="1">
+      <div class="section-bg-slideshow" id="hero-bg-slideshow"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <div class="hero-content">
+        <p class="eyebrow" data-aos="fade-down">The Wedding Celebration Of</p>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="150">
+          LIA <span class="accent-script">&amp;</span> Dhafid
+        </h1>
+        <p class="hero-date" data-aos="fade-up" data-aos-delay="300">Sabtu, 12 Desember 2026</p>
+
+        <div class="countdown-inline" id="hero-countdown" data-aos="fade-up" data-aos-delay="450" aria-label="Hitung mundur menuju hari pernikahan">
+          <div class="cd-item"><span class="cd-number" id="cd-days">00</span><span class="cd-label">Hari</span></div>
+          <div class="cd-item"><span class="cd-number" id="cd-hours">00</span><span class="cd-label">Jam</span></div>
+          <div class="cd-item"><span class="cd-number" id="cd-minutes">00</span><span class="cd-label">Menit</span></div>
+          <div class="cd-item"><span class="cd-number" id="cd-seconds">00</span><span class="cd-label">Detik</span></div>
+        </div>
+
+        <a href="#quote" class="scroll-down-btn" data-aos="fade-up" data-aos-delay="600" aria-label="Gulir ke bawah">
+          <span class="scroll-down-line"></span>
+          <span>Scroll</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== 2. QUOTE ========== -->
+    <section id="quote" class="section quote-section">
+      <div class="section-overlay overlay-none"></div>
+      <blockquote class="quote-text" data-aos="fade-up">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
+        pasangan hidup dari jenismu sendiri, supaya kamu cenderung dan merasa
+        tenteram kepadanya, serta dijadikan-Nya di antaramu rasa kasih dan sayang.
+        <footer class="quote-source">— QS. Ar-Rum: 21</footer>
+      </blockquote>
+    </section>
+
+    <!-- ========== 3. BRIDE ========== -->
+    <section id="bride" class="section profile-section profile-bride" data-bg-index="2">
+      <div class="section-bg" style="background-image:url('assets/image/gallery/bride.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <div class="profile-content" data-aos="slide-in-right">
+        <span class="profile-flourish" aria-hidden="true">❀</span>
+        <h2 class="profile-name">LIA</h2>
+        <p class="profile-parents">Putri dari<br>Bapak  &amp; Ibu </p>
+        <div class="profile-socials">
+          <a href="#" aria-label="Instagram LIA">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. GROOM ========== -->
+    <section id="groom" class="section profile-section profile-groom" data-bg-index="3">
+      <div class="section-bg" style="background-image:url('assets/image/gallery/groom.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <div class="profile-content" data-aos="slide-in-left">
+        <span class="profile-flourish" aria-hidden="true">❀</span>
+        <h2 class="profile-name">Dhafid</h2>
+        <p class="profile-parents">Putra dari<br>Bapak  &amp; Ibu </p>
+        <div class="profile-socials">
+          <a href="#" aria-label="Instagram Dhafid">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. LOVE STORY TIMELINE ========== -->
+    <section id="love-story" class="section story-section" data-bg-index="4">
+      <div class="section-bg fixed-bg" style="background-image:url('assets/image/gallery/gallery4.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <h2 class="section-title" data-aos="fade-up">Kisah Kasih Kami</h2>
+      <div class="timeline">
+        <article class="timeline-item" data-aos="fade-up">
+          <span class="timeline-year">2019</span>
+          <h3>Pertemuan Pertama</h3>
+          <p>Berawal dari pertemuan singkat di sebuah acara kampus, siapa sangka takdir mempertemukan kami kembali.</p>
+        </article>
+        <article class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+          <span class="timeline-year">2021</span>
+          <h3>Menjalin Kasih</h3>
+          <p>Dari teman diskusi menjadi teman hidup, kami memutuskan untuk melangkah bersama dalam sebuah hubungan.</p>
+        </article>
+        <article class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <span class="timeline-year">2025</span>
+          <h3>Lamaran</h3>
+          <p>Di bawah langit senja, sebuah janji suci terucap sebagai awal dari perjalanan baru kami.</p>
+        </article>
+        <article class="timeline-item" data-aos="fade-up" data-aos-delay="450">
+          <span class="timeline-year">2026</span>
+          <h3>Menuju Pernikahan</h3>
+          <p>Dengan restu kedua orang tua, kami siap menyempurnakan separuh agama di hari yang berbahagia ini.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 6. EVENT (Akad & Resepsi) + COUNTDOWN ========== -->
+    <section id="event" class="section event-section" data-bg-index="6">
+      <div class="section-bg" style="background-image:url('assets/image/gallery/gallery6.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <h2 class="section-title" data-aos="fade-up">Waktu &amp; Acara</h2>
+
+      <div class="countdown-block" data-aos="fade-up">
+        <div class="countdown-grid" id="event-countdown" aria-label="Hitung mundur menuju hari pernikahan">
+          <div class="cd-item"><span class="cd-number" data-cd="days">00</span><span class="cd-label">Hari</span></div>
+          <div class="cd-item"><span class="cd-number" data-cd="hours">00</span><span class="cd-label">Jam</span></div>
+          <div class="cd-item"><span class="cd-number" data-cd="minutes">00</span><span class="cd-label">Menit</span></div>
+          <div class="cd-item"><span class="cd-number" data-cd="seconds">00</span><span class="cd-label">Detik</span></div>
+        </div>
+      </div>
+
+      <div class="event-cards">
+        <article class="event-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="event-icon" aria-hidden="true">💍</span>
+          <h3>Akad Nikah</h3>
+          <p class="event-day">Sabtu, 12 Desember 2026</p>
+          <p class="event-time">08.00 — 10.00 WIB</p>
+          <p class="event-place">Masjid Al-Ikhlas, Jakarta Selatan</p>
+          <button type="button" class="btn-outline add-to-calendar" data-event="akad">+ Tambah ke Kalender</button>
+        </article>
+        <article class="event-card" data-aos="fade-up" data-aos-delay="250">
+          <span class="event-icon" aria-hidden="true">🥂</span>
+          <h3>Resepsi</h3>
+          <p class="event-day">Sabtu, 12 Desember 2026</p>
+          <p class="event-time">11.00 — 14.00 WIB</p>
+          <p class="event-place">The Kayana Grand Ballroom, Jakarta Selatan</p>
+          <button type="button" class="btn-outline add-to-calendar" data-event="resepsi">+ Tambah ke Kalender</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 7. LOCATION ========== -->
+    <section id="location" class="section location-section" data-bg-index="11">
+      <div class="section-bg fixed-bg" style="background-image:url('assets/image/gallery/gallery11.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <h2 class="section-title" data-aos="fade-up">Lokasi Acara</h2>
+      <p class="location-address" data-aos="fade-up">
+        The Kayana Grand Ballroom, Jl. Wedding Raya No. 12, Jakarta Selatan, DKI Jakarta
+      </p>
+      <div class="map-embed" data-aos="fade-up" data-aos-delay="150">
+        <iframe
+          title="Peta lokasi acara pernikahan"
+          src="https://www.google.com/maps?q=Jakarta%20Selatan&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <a class="btn-outline" data-aos="fade-up" data-aos-delay="250"
+         href="https://www.google.com/maps/search/?api=1&query=Jakarta+Selatan"
+         target="_blank" rel="noopener noreferrer">Buka di Google Maps</a>
+    </section>
+
+    <!-- ========== 8. GALLERY ========== -->
+    <section id="gallery" class="section gallery-section" data-bg-index="5">
+      <div class="section-bg" style="background-image:url('assets/image/gallery/gallery5.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <h2 class="section-title" data-aos="fade-up">Galeri Kami</h2>
+
+      <div class="swiper gallery-swiper" data-aos="fade-up" data-aos-delay="150">
+        <div class="swiper-wrapper" id="gallery-swiper-wrapper">
+          <!-- 12 slides injected by JS -->
+        </div>
+        <div class="swiper-button-next" aria-label="Foto selanjutnya"></div>
+        <div class="swiper-button-prev" aria-label="Foto sebelumnya"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Lightbox for gallery -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto penuh" hidden>
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Tutup galeri">&times;</button>
+      <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- ========== 9. WEDDING GIFT ========== -->
+    <section id="gift" class="section gift-section" data-bg-index="8">
+      <div class="section-bg fixed-bg" style="background-image:url('assets/image/gallery/gallery8.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <h2 class="section-title" data-aos="fade-up">Wedding Gift</h2>
+      <p class="gift-intro" data-aos="fade-up">
+        Doa restu Anda adalah karunia terindah bagi kami. Namun jika ingin memberi tanda kasih,
+        kami dengan penuh hormat menyediakan pilihan berikut.
+      </p>
+
+      <div class="gift-tabs" data-aos="fade-up" data-aos-delay="150">
+        <div class="gift-tab-buttons" role="tablist">
+          <button type="button" class="gift-tab-btn active" role="tab" aria-selected="true" data-tab="qris">QRIS</button>
+          <button type="button" class="gift-tab-btn" role="tab" aria-selected="false" data-tab="bank">Transfer Bank</button>
+          <button type="button" class="gift-tab-btn" role="tab" aria-selected="false" data-tab="address">Kado Fisik</button>
+        </div>
+
+        <div class="gift-tab-panel active" data-panel="qris" role="tabpanel">
+          <img src="assets/image/icon/qris.png" alt="Kode QRIS untuk hadiah pernikahan" class="qris-image" loading="lazy">
+          <p class="gift-note">Scan menggunakan aplikasi e-wallet atau m-banking favorit Anda.</p>
+        </div>
+
+        <div class="gift-tab-panel" data-panel="bank" role="tabpanel" hidden>
+          <div class="bank-card">
+            <span class="bank-name">Bank Central Asia (BCA)</span>
+            <span class="bank-number" id="bank-number-bca">1234567890</span>
+            <span class="bank-holder">a.n. LIA</span>
+            <button type="button" class="btn-copy" data-copy-target="bank-number-bca">Salin Nomor</button>
+          </div>
+          <div class="bank-card">
+            <span class="bank-name">Bank Mandiri</span>
+            <span class="bank-number" id="bank-number-mandiri">0987654321</span>
+            <span class="bank-holder">a.n. Dhafid Aditya Nugraha</span>
+            <button type="button" class="btn-copy" data-copy-target="bank-number-mandiri">Salin Nomor</button>
+          </div>
+        </div>
+
+        <div class="gift-tab-panel" data-panel="address" role="tabpanel" hidden>
+          <p class="gift-note">Jl. Bahagia Selalu No. 8, Jakarta Selatan, DKI Jakarta 12345</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 10. RSVP ========== -->
+    <section id="rsvp" class="section rsvp-section" data-bg-index="7">
+      <div class="section-bg" style="background-image:url('assets/image/gallery/gallery7.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <h2 class="section-title" data-aos="fade-up">RSVP</h2>
+      <p class="section-subtitle" data-aos="fade-up">Mohon konfirmasi kehadiran Anda sebelum 1 Desember 2026</p>
+
+      <form id="rsvp-form" class="rsvp-form" data-aos="fade-up" data-aos-delay="150" novalidate>
+        <div class="form-group">
+          <label for="rsvp-nama">Nama <span aria-hidden="true">*</span></label>
+          <input type="text" id="rsvp-nama" name="nama" required autocomplete="name">
+          <span class="form-error" id="error-nama" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="rsvp-kehadiran">Konfirmasi Kehadiran <span aria-hidden="true">*</span></label>
+          <select id="rsvp-kehadiran" name="kehadiran" required>
+            <option value="">Pilih konfirmasi</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+            <option value="Ragu-ragu">Masih Ragu-ragu</option>
+          </select>
+          <span class="form-error" id="error-kehadiran" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="rsvp-jumlah">Jumlah Tamu</label>
+          <input type="number" id="rsvp-jumlah" name="jumlah_tamu" min="1" max="10" value="1">
+        </div>
+
+        <div class="form-group">
+          <label for="rsvp-pesan">Pesan (opsional)</label>
+          <textarea id="rsvp-pesan" name="pesan" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="rsvp-submit-btn">
+          <span class="btn-submit-text">Kirim Konfirmasi</span>
+          <span class="btn-spinner" hidden aria-hidden="true"></span>
+        </button>
+
+        <p class="form-status" id="rsvp-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ========== 11. WISHES ========== -->
+    <section id="wishes" class="section wishes-section" data-bg-index="9">
+      <div class="section-bg fixed-bg" style="background-image:url('assets/image/gallery/gallery9.jpeg');"></div>
+      <div class="section-overlay overlay-cream"></div>
+      <h2 class="section-title" data-aos="fade-up">Ucapan &amp; Doa</h2>
+
+      <form id="wish-form" class="wish-form" data-aos="fade-up" novalidate>
+        <input type="text" id="wish-nama" name="nama" placeholder="Nama Anda" required autocomplete="name">
+        <textarea id="wish-pesan" name="pesan" rows="3" placeholder="Tulis ucapan dan doa terbaik Anda..." required></textarea>
+        <button type="submit" class="btn-submit" id="wish-submit-btn">
+          <span class="btn-submit-text">Kirim Ucapan</span>
+          <span class="btn-spinner" hidden aria-hidden="true"></span>
+        </button>
+        <p class="form-status" id="wish-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="wishes-list-wrap" data-aos="fade-up" data-aos-delay="150">
+        <div class="wishes-sort">
+          <label for="wishes-sort-select">Urutkan:</label>
+          <select id="wishes-sort-select">
+            <option value="newest">Terbaru</option>
+            <option value="oldest">Terlama</option>
+          </select>
+        </div>
+        <ul class="wishes-list" id="wishes-list" aria-live="polite"></ul>
+        <button type="button" class="btn-outline" id="wishes-load-more" hidden>Muat Lebih Banyak</button>
+        <p class="wishes-empty" id="wishes-empty" hidden>Jadilah yang pertama mengirimkan ucapan &amp; doa.</p>
+      </div>
+    </section>
+
+    <!-- ========== 12. THANK YOU / CLOSING ========== -->
+    <section id="closing" class="section closing-section" data-bg-index="10">
+      <div class="section-bg" style="background-image:url('assets/image/gallery/gallery10.jpeg');"></div>
+      <div class="section-overlay overlay-cream-strong"></div>
+      <div class="closing-content" data-aos="fade-up">
+        <span class="closing-flourish" aria-hidden="true">❀</span>
+        <h2 class="closing-title">Terima Kasih</h2>
+        <p class="closing-text">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+          berkenan hadir dan memberikan doa restu kepada kami.
+        </p>
+        <p class="closing-signature">LIA &amp; Dhafid</p>
+      </div>
+    </section>
+
+    <!-- ========== 13. FOOTER ========== -->
+    <footer class="site-footer">
+      <p>&copy; 2026 LIA &amp; Dhafid Wedding. Dibuat dengan ♡</p>
+    </footer>
+
+  </main>
+
+  <!-- ============ FLOATING UI ============ -->
+  <button type="button" id="music-toggle" class="floating-music" aria-label="Putar atau jeda musik" aria-pressed="false">
+    <span class="music-disc">
+      <span class="music-icon" aria-hidden="true">♪</span>
+    </span>
+  </button>
+
+  <button type="button" id="back-to-top" class="floating-back-top" aria-label="Kembali ke atas" hidden>
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <nav class="floating-nav" id="floating-nav" aria-label="Navigasi bagian undangan">
+    <ul>
+      <li><a href="#hero" data-nav="hero" aria-label="Beranda"><span></span></a></li>
+      <li><a href="#bride" data-nav="bride" aria-label="Mempelai Wanita"><span></span></a></li>
+      <li><a href="#groom" data-nav="groom" aria-label="Mempelai Pria"><span></span></a></li>
+      <li><a href="#love-story" data-nav="love-story" aria-label="Kisah Kasih"><span></span></a></li>
+      <li><a href="#event" data-nav="event" aria-label="Acara"><span></span></a></li>
+      <li><a href="#gallery" data-nav="gallery" aria-label="Galeri"><span></span></a></li>
+      <li><a href="#gift" data-nav="gift" aria-label="Hadiah"><span></span></a></li>
+      <li><a href="#rsvp" data-nav="rsvp" aria-label="RSVP"><span></span></a></li>
+      <li><a href="#wishes" data-nav="wishes" aria-label="Ucapan"><span></span></a></li>
+    </ul>
+  </nav>
+
+  <audio id="bg-music" loop preload="none">
+    <source src="assets/audio/music.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- ============ VENDOR JS ============ -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+<!-- ============ APP JS ============ -->
+<script src="assets/js/supabase.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>
