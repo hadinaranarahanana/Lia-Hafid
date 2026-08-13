@@ -106,6 +106,7 @@
     initGiftTabs();
     initCopyButtons();
     initCalendarButtons();
+    initMapModal();
     initRSVPForm();
     await initWishes();
     initMagneticButtons();
@@ -452,6 +453,36 @@
     closeBtn.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lightbox.hidden) closeLightbox(); });
+  }
+
+  /* ============================================================
+     9b. MAP MODAL (location pin -> popup map)
+  ============================================================ */
+  function initMapModal() {
+    const trigger = $('#mapTrigger');
+    const modal = $('#mapModal');
+    const closeBtn = $('#mapModalClose');
+    const iframe = $('#mapModalIframe');
+    if (!trigger || !modal || !closeBtn || !iframe) return;
+
+    function openMapModal() {
+      // Lazy-load the map only the first time it's opened
+      if (!iframe.src && iframe.dataset.src) {
+        iframe.src = iframe.dataset.src;
+      }
+      modal.hidden = false;
+      closeBtn.focus();
+    }
+
+    function closeMapModal() {
+      modal.hidden = true;
+      trigger.focus();
+    }
+
+    trigger.addEventListener('click', openMapModal);
+    closeBtn.addEventListener('click', closeMapModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeMapModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeMapModal(); });
   }
 
   /* ============================================================
@@ -859,18 +890,69 @@
   }
 
   /* ============================================================
+     16. CLOSING SECTION: slide-up when visible (IntersectionObserver)
+  ============================================================ */
+  function initClosingObserver() {
+    const target = $('.closing-content');
+    if (!target) return;
+
+    const rightPanel = document.querySelector('.right-panel');
+    const usePanelAsRoot = window.matchMedia('(min-width: 901px)').matches && rightPanel;
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          target.classList.add('in-view');
+          // start auto-scroll of closing text
+          startClosingAutoScroll();
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { root: usePanelAsRoot ? rightPanel : null, threshold: 0.15 });
+
+    observer.observe(target);
+
+    function startClosingAutoScroll() {
+      const container = target.querySelector('.closing-card');
+      const inner = container && container.querySelector('.closing-text');
+      if (!container || !inner) return;
+
+      // Reset any previous inline transforms
+      inner.style.transition = '';
+      inner.style.transform = 'translateY(0)';
+
+      // Compute scroll distance (inner height minus visible container height)
+      const distance = inner.scrollHeight - container.clientHeight;
+      if (distance <= 0) return; // nothing to scroll
+
+      // Duration proportional to distance (ms) with min/max bounds
+      const duration = Math.min(Math.max(distance * 18, 4000), 20000);
+
+      // Force reflow then animate using transform for smooth GPU-powered movement
+      // start from 0 -> translateY(-distance)
+      requestAnimationFrame(() => {
+        inner.style.willChange = 'transform';
+        inner.style.transition = `transform ${duration}ms linear`;
+        inner.style.transform = `translateY(-${distance}px)`;
+      });
+    }
+  }
+
+  /* ============================================================
      INIT — DOM READY
   ============================================================ */
   document.addEventListener('DOMContentLoaded', () => {
     initGuestName();
     initEnvelope();
     initCountdown();
+    initClosingObserver();
 
     document.addEventListener('invitation:opened', () => {
       initLenis();
       initAOS();
       initFloatingUI();
       initScrollReveals();
+      // ensure observer is active after main-app becomes visible
+      initClosingObserver();
     }, { once: true });
   });
 })();

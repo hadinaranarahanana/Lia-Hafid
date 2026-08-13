@@ -397,19 +397,21 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .section-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  background-color: var(--color-cream);
   z-index: 0;
 }
-.section-bg.fixed-bg { background-attachment: fixed; }
-@media (max-width: 900px) {
-  .section-bg.fixed-bg { background-attachment: scroll; } /* fixed unreliable on mobile */
-}
+/* fixed-bg (parallax) disabled: background-attachment:fixed sizes/positions
+   the image against the whole viewport, not the right panel, which cropped
+   the photo. Kept selector for compatibility but attachment stays scroll. */
+.section-bg.fixed-bg { background-attachment: scroll; }
 
-.section-bg-slideshow { position: absolute; inset: 0; z-index: 0; }
+.section-bg-slideshow { position: absolute; inset: 0; z-index: 0; background: var(--color-cream); }
 .section-bg-slideshow .slide {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center;
+  background-size: contain; background-repeat: no-repeat; background-position: center;
   opacity: 0; transform: scale(1.12);
   transition: opacity 2.2s ease, transform 6s ease;
 }
@@ -746,16 +748,82 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   line-height: 1.7;
   margin: 0 0 2rem;
 }
+/* Pin trigger that opens the map modal */
+.map-trigger {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid rgba(201, 166, 103, 0.35);
+  border-radius: var(--radius-soft);
+  background: #f6f3ef;
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+  transition: background var(--transition-med), transform var(--transition-med);
+}
+.map-trigger:hover, .map-trigger:focus-visible {
+  background: rgba(201, 166, 103, 0.15);
+}
+.map-trigger-icon {
+  display: inline-flex;
+  color: var(--color-gold);
+  transition: transform var(--transition-med);
+}
+.map-trigger:hover .map-trigger-icon {
+  transform: translateY(-3px);
+}
+.map-trigger-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* Modal that reveals the full embedded map */
+.map-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.65);
+}
+.map-modal[hidden] { display: none; }
+.map-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  background: var(--color-white, #fff);
+  border-radius: var(--radius-soft);
+  padding: 2.5rem 1rem 1rem;
+}
+.map-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  border: none;
+  background: transparent;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text);
+}
 .map-embed {
   width: 100%;
-  max-width: 560px;
-  aspect-ratio: 16/10;
-  margin-bottom: 1.75rem;
+  min-height: 380px;
+  height: 60vh;
+  max-height: 450px;
   border-radius: var(--radius-soft);
   overflow: hidden;
   border: 1px solid rgba(201, 166, 103, 0.35);
+  background: #f6f3ef; /* subtle background while tiles load */
 }
 .map-embed iframe { width: 100%; height: 100%; border: 0; }
+/* Ensure iframe receives pointer events and displays as block to avoid click-to-activate issues */
+.map-embed iframe { display: block; pointer-events: auto; }
 
 /* ============================================================
    GALLERY
@@ -963,7 +1031,20 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 .closing-content {
   max-width: 500px;
-  padding-bottom: 2rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  min-height: 83vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* start slightly below with zero opacity; `.in-view` will bring it up */
+  transform: translateY(28px);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+.closing-content.in-view {
+  transform: translateY(0);
+  opacity: 1;
 }
 .closing-flourish { display: block; font-size: 1.6rem; color: var(--color-gold); margin-bottom: 1rem; }
 .closing-title {
@@ -979,10 +1060,17 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
   backdrop-filter: blur(12px);
   max-width: 640px;
+  width: 100%;
+  /* auto top-margin pushes this element (and everything after it) to the
+     bottom of .closing-content, leaving the title in its original spot */
+  margin-top: auto;
+  /* Constrain height for internal auto-scroll animation */
+  max-height: 260px;
+  overflow: hidden;
 }
 .closing-text { font-size: 0.95rem; line-height: 1.85; color: var(--color-text-soft); margin: 0; }
 .closing-signature {
-  margin: 4rem auto 0;
+  margin: 1.75rem auto 0;
   font-family: var(--font-accent);
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   color: var(--color-gold);
