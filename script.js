@@ -46,7 +46,7 @@
       'gallery15.jpeg'
     ],
     galleryExt: 'jpeg', // ganti di sini jika format foto kamu beda (webp/jpg/png)
-    weddingDate: new Date('2026-12-12T08:00:00+07:00'),
+    weddingDate: new Date('2026-09-27T08:00:00+07:00'),
     heroSlideInterval: 3000,
     leftSlideInterval: 4500
   };
