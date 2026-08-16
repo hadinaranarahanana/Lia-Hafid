@@ -353,16 +353,20 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  font-family: var(--font-heading);
 }
 .caption-accent {
-  font-family: var(--font-accent);
+  font-family: var(--font-heading);
+  font-style: italic;
   font-size: 1.9rem;
+  line-height: 1.1;
 }
 .caption-date {
   font-size: 0.7rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   opacity: 0.85;
+  font-style: normal;
 }
 
 /* ---------- RIGHT PANEL (independent scroll) ---------- */
