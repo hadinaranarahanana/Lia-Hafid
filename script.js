@@ -348,7 +348,7 @@
     AOS.init({
       duration: 900,
       easing: 'ease-out-cubic',
-      once: true,
+      once: false,
       offset: 60
     });
 
@@ -882,7 +882,8 @@
           scrollTrigger: {
             trigger: title,
             scroller: isDesktop ? rightPanel : window,
-            start: 'top 85%'
+            start: 'top 85%',
+            toggleActions: 'play reverse play reverse'
           }
         }
       );
@@ -898,13 +899,14 @@
 
     const rightPanel = document.querySelector('.right-panel');
     const usePanelAsRoot = window.matchMedia('(min-width: 901px)').matches && rightPanel;
-    const observer = new IntersectionObserver((entries, obs) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           target.classList.add('in-view');
           // start auto-scroll of closing text
           startClosingAutoScroll();
-          obs.unobserve(entry.target);
+        } else {
+          target.classList.remove('in-view');
         }
       });
     }, { root: usePanelAsRoot ? rightPanel : null, threshold: 0.15 });

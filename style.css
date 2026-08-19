@@ -589,7 +589,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 ============================================================ */
 .profile-content {
   max-width: 420px;
-  text-align: center;
+  text-align: right;
   position: relative;
   z-index: 2;
 }
@@ -610,6 +610,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   line-height: 1.8;
   color: var(--color-text-soft);
   margin: 0 0 1.25rem;
+  text-align: right;
 }
 .profile-socials a {
   font-size: 0.7rem;
@@ -748,7 +749,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .location-address {
   max-width: 480px;
   font-size: 0.9rem;
-  color: var(--color-text-soft);
+  color: var(--color-gold);
   line-height: 1.7;
   margin: 0 0 2rem;
 }
