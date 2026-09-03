@@ -601,7 +601,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 .profile-name {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: clamp(1.6rem, 4vw, 2.0rem);
   font-weight: 500;
   margin: 0 0 1rem;
 }
@@ -722,7 +722,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 .event-day, .event-time, .event-place {
   font-size: 0.82rem;
-  color: var(--color-text-soft);
+  color: var(--color-text);
   margin: 0.2rem 0;
 }
 .btn-outline {
@@ -923,6 +923,95 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .qris-image { width: 220px; margin: 0 auto 1rem; border: 1px solid rgba(201,166,103,0.2); }
 .gift-note { font-size: 0.8rem; color: var(--color-text-soft); }
 
+/* ATM-style bank card */
+.atm-card {
+  position: relative;
+  background: linear-gradient(135deg, #5a1a1e 0%, #3c0f12 55%, #2a0a0c 100%);
+  border: 1px solid rgba(201,166,103,0.35);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1.1rem;
+  text-align: left;
+  color: var(--color-white);
+  box-shadow: 0 14px 30px rgba(30, 5, 5, 0.35);
+  overflow: hidden;
+}
+.atm-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(201,166,103,0.14), transparent 55%);
+  pointer-events: none;
+}
+.atm-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.atm-card-badge {
+  background: var(--color-white);
+  color: #1a3a8f;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+}
+.atm-card-chip {
+  width: 34px;
+  height: 26px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold) 60%, #a3813f);
+  position: relative;
+}
+.atm-card-chip::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(58, 38, 10, 0.45);
+  border-radius: 3px;
+}
+.atm-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+.atm-card-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+.atm-card-number {
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--color-white);
+}
+.atm-card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+.atm-card-holder { display: flex; flex-direction: column; gap: 0.2rem; }
+.atm-card-name { font-style: italic; font-size: 0.9rem; color: var(--color-gold-light); }
+.atm-copy {
+  align-self: flex-end;
+  margin-top: 0;
+  background: var(--color-white);
+  color: #3c0f12;
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+}
+.atm-copy.copied { background: var(--color-gold); color: var(--color-white); }
+
 .bank-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(201,166,103,0.18);
@@ -1085,6 +1174,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 .closing-flourish { display: block; font-size: 1.6rem; color: var(--color-gold); margin-bottom: 1rem; }
 .closing-title {
+  color: var(--color-gold);
   font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 2.6rem);
   margin: 0 0 1.25rem;
