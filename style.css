@@ -746,7 +746,13 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* ============================================================
    LOCATION
 ============================================================ */
+.location-section {
+  min-height: 100vh;
+  justify-content: center;
+}
 .location-address {
+  max-width: 480px;
+  width: 100%;
   max-width: 480px;
   font-size: 0.9rem;
   color: var(--color-text);
@@ -1358,6 +1364,19 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .event-cards { flex-direction: column; align-items: center; }
   .floating-music { right: 1.1rem; bottom: 1.1rem; }
   .floating-back-top { right: 1.1rem; bottom: 4.6rem; }
+}
+
+@media (max-width: 900px) {
+  .location-section {
+    min-height: 100svh;
+  }
+  .location-address {
+    max-width: 480px;
+  }
+  .location-section .map-trigger,
+  .location-section .btn-outline {
+    flex-shrink: 0;
+  }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
