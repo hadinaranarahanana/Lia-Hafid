@@ -749,9 +749,16 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .location-address {
   max-width: 480px;
   font-size: 0.9rem;
-  color: var(--color-gold);
+  color: var(--color-text);
   line-height: 1.7;
   margin: 0 0 2rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 253, 248, 0.72);
+  border: 1px solid rgba(201, 166, 103, 0.35);
+  border-radius: var(--radius-soft);
+  box-shadow: 0 10px 24px rgba(60, 42, 20, 0.12);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 /* Pin trigger that opens the map modal */
 .map-trigger {
@@ -950,14 +957,28 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   margin-bottom: 1.5rem;
 }
 .atm-card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--color-white);
+  width: 130px;
+  height: 36px;
+  padding: 0;
+  border-radius: 6px;
+}
+.atm-card-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.atm-card-badge-text {
   color: #1a3a8f;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   letter-spacing: 0.03em;
-  padding: 0.35rem 0.9rem;
-  border-radius: 6px;
 }
 .atm-card-chip {
   width: 34px;
