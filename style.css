@@ -15,6 +15,7 @@
   --color-text: #040300;
   --color-text-soft: #040300;
   --color-white: #ffffff;
+  --background-photo: url('assets/image/gallery/gallery12.jpeg');
 
   /* ---------- Typography ---------- */
   --font-heading: 'Cormorant Garamond', serif;
@@ -45,7 +46,12 @@ body {
   font-family: var(--font-body);
   font-weight: 300;
   color: var(--color-text);
-  background: var(--color-cream);
+  background-color: var(--color-cream);
+  background-image: var(--background-photo);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -401,10 +407,10 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .section-bg {
   position: absolute;
   inset: 0;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: var(--color-cream);
+  background-color: transparent;
   z-index: 0;
 }
 /* fixed-bg (parallax) disabled: background-attachment:fixed sizes/positions
@@ -412,7 +418,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
    the photo. Kept selector for compatibility but attachment stays scroll. */
 .section-bg.fixed-bg { background-attachment: scroll; }
 
-.section-bg-slideshow { position: absolute; inset: 0; z-index: 0; background: var(--color-cream); }
+.section-bg-slideshow { position: absolute; inset: 0; z-index: 0; background: transparent; }
 .section-bg-slideshow .slide {
   position: absolute; inset: 0;
   background-size: contain; background-repeat: no-repeat; background-position: center;
@@ -556,7 +562,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* ============================================================
    QUOTE
 ============================================================ */
-.quote-section { min-height: 60vh; background: var(--color-cream); }
+.quote-section { min-height: 60vh; background: transparent; }
 .quote-text {
   max-width: 620px;
   font-family: var(--font-heading);
@@ -1246,7 +1252,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .closing-text { font-size: 0.95rem; line-height: 1.85; color: var(--color-text-soft); margin: 0; }
 .closing-signature {
   margin: 1.75rem auto 0;
-  font-family: var(--font-accent);
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   color: var(--color-gold);
   letter-spacing: 0.05em;
