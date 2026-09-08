@@ -4,6 +4,14 @@
    Heading: Cormorant Garamond | Body: Poppins | Accent: Great Vibes
 ============================================================ */
 
+@font-face {
+  font-family: 'Hello Jones';
+  src: url('assets/font/Font Hello Jones Free Trial/Hello Jones Free Trial.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* ---------- Color tokens ---------- */
   --color-cream: #f8f3ea;
@@ -21,6 +29,7 @@
   --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'Poppins', sans-serif;
   --font-accent: 'Great Vibes', cursive;
+  --font-couple-name: 'Hello Jones', var(--font-heading);
 
   /* ---------- Layout ---------- */
   --left-width: 40%;
@@ -179,7 +188,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 
 .envelope-names {
-  font-family: var(--font-heading);
+  font-family: var(--font-couple-name);
   font-weight: 400;
   font-size: clamp(2.4rem, 8vw, 3.8rem);
   margin: 0;
@@ -505,7 +514,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .hero-section { padding-top: 6rem; padding-bottom: 6rem; }
 .hero-content { max-width: 640px; }
 .hero-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-couple-name);
   font-weight: 400;
   font-size: clamp(2.6rem, 7vw, 4.2rem);
   margin: 0 0 1rem;
@@ -606,12 +615,13 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   margin-bottom: 1rem;
 }
 .profile-name {
-  font-family: var(--font-heading);
+  font-family: var(--font-couple-name);
   font-size: clamp(1.6rem, 4vw, 2.0rem);
   font-weight: 500;
   margin: 0 0 1rem;
 }
 .profile-parents {
+  font-family: var(--font-couple-name);
   font-size: 0.85rem;
   line-height: 1.8;
   color: var(--color-text-soft);
@@ -1253,7 +1263,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .closing-text { font-size: 0.95rem; line-height: 1.85; color: var(--color-text-soft); margin: 0; }
 .closing-signature {
   margin: 1.75rem auto 0;
-  font-family: var(--font-heading);
+  font-family: var(--font-couple-name);
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   color: var(--color-gold);
   letter-spacing: 0.05em;
