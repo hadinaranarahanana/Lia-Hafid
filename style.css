@@ -12,6 +12,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'TheHeritageLegacyFancyLogo';
+  src: url('assets/font/Font Hello Jones Free Trial/TheHeritageLegacyFancyLogo-xR2r8.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* ---------- Color tokens ---------- */
   --color-cream: #f8f3ea;
@@ -188,7 +196,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 
 .envelope-names {
-  font-family: var(--font-couple-name);
+  font-family: 'TheHeritageLegacyFancyLogo', var(--font-heading);
   font-weight: 400;
   font-size: clamp(2.4rem, 8vw, 3.8rem);
   margin: 0;
@@ -371,8 +379,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   font-family: var(--font-heading);
 }
 .caption-accent {
-  font-family: var(--font-heading);
-  font-style: italic;
+  font-family: 'TheHeritageLegacyFancyLogo', var(--font-heading);
+  font-style: normal;
   font-size: 1.9rem;
   line-height: 1.1;
 }
@@ -514,7 +522,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .hero-section { padding-top: 6rem; padding-bottom: 6rem; }
 .hero-content { max-width: 640px; }
 .hero-title {
-  font-family: var(--font-couple-name);
+  font-family: 'TheHeritageLegacyFancyLogo', var(--font-heading);
   font-weight: 400;
   font-size: clamp(2.6rem, 7vw, 4.2rem);
   margin: 0 0 1rem;
@@ -615,19 +623,33 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   margin-bottom: 1rem;
 }
 .profile-name {
-  font-family: var(--font-couple-name);
-  font-size: clamp(1.6rem, 4vw, 2.0rem);
-  font-weight: 500;
+  font-family: 'TheHeritageLegacyFancyLogo', var(--font-heading);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 400;
   margin: 0 0 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.02);
 }
 .profile-parents {
-  font-family: var(--font-couple-name);
+  font-family: 'TheHeritageLegacyFancyLogo', var(--font-heading);
   font-size: 0.85rem;
   line-height: 1.8;
   color: var(--color-text-soft);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.95), 0 1px 8px rgba(255, 255, 255, 0.75);
   margin: 0 0 1.25rem;
   text-align: right;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0;
 }
 .profile-socials a {
   font-size: 0.7rem;
